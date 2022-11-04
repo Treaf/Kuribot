@@ -1,0 +1,36 @@
+{
+  "name": "bots",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "devStart": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Treaf/Kuribot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Treaf/Kuribot/issues"
+  },
+  "homepage": "https://github.com/Treaf/Kuribot#readme",
+  "description": "",
+  "dependencies": {
+    "@discordjs/builders": "^1.3.0",
+    "@discordjs/rest": "^1.3.0",
+    "command.js": "^0.0.1",
+    "config.json": "^0.0.4",
+    "discord-api-types": "^0.37.16",
+    "discord.js": "^14.6.0",
+    "dotenv": "^16.0.3",
+    "git": "^0.1.5",
+    "needle": "^3.1.0",
+    "open-graph-scraper": "^4.11.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
