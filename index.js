@@ -75,7 +75,7 @@ client.on("ready", message=>{
                 if (date.getHours() ===1){timestopduellinks=false;}
                 else {timestopduellinks=true}
                 }
-            else {timestopduellinks=true;   console.log("on rentre");
+            else {timestopduellinks=true;   ;
  
                 var avtdl= textdl.indexOf('<meta property=\u0022og:image\u0022 content=\u0022');
                 var imgdl=textdl.substring(avtdl+35);
@@ -164,7 +164,7 @@ client.on("ready", message=>{
                     client.channels.cache.get(idsalonnewscd).send({embeds:[embedcd]})}
         })    
     }
-    ,1000);
+    ,1000*3600);
 }
 );
 
