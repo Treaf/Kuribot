@@ -106,7 +106,7 @@ client.on("ready", message=>{
                 const idsalonnews="993787860048150569"; // Mettre ID du salon des news
 
                 if(text.includes("Main Box")){
-                    const embed = new EmbedBuilder()
+                    var embed = new EmbedBuilder()
                         .setColor("#001427")
                         .setTitle("Duel Links News !")
                         .setURL(content)
@@ -114,7 +114,7 @@ client.on("ready", message=>{
                         .setImage(img);
                     client.channels.cache.get(idsalonnews).send({embeds:[embed]})} 
                 else if(text.includes("Mini Box")){
-                        const embed = new EmbedBuilder()
+                        var embed = new EmbedBuilder()
                             .setColor("#001427")
                             .setTitle("Duel Links News !")
                             .setURL(content)
@@ -122,7 +122,7 @@ client.on("ready", message=>{
                             .setImage(img);
                         client.channels.cache.get(idsalonnews).send({embeds:[embed]})} 
                     else {
-                            const embed = new EmbedBuilder()
+                            var embed = new EmbedBuilder()
                                 .setColor("#001427")
                                 .setTitle("Duel Links News !")
                                 .setURL(content)
@@ -160,7 +160,7 @@ client.on("ready", message=>{
                 const idsalonnews="993789778833195138"; // Mettre ID du salon des news
 
 
-                const embed = new EmbedBuilder()
+                var embed = new EmbedBuilder()
                                 .setColor("#5c3a93")
                                 .setTitle("Master Duel News !")
                                 .setURL(content)
@@ -196,7 +196,7 @@ client.on("ready", message=>{
                 const idsalonnews="993789979371249745"; // Mettre ID du salon des news
 
 
-                const embed = new EmbedBuilder()
+                var embed = new EmbedBuilder()
                                 .setColor("#ff8000")
                                 .setTitle("Cross Duel News !")
                                 .setURL(content)
