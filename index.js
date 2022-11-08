@@ -34,11 +34,6 @@ client.on("messageCreate", message => {
 }
 );
 
-// News YUGIOH
- 
-
-client.on("ready", message=>{
-    console.log("prêt");
 
     // Timers
     var timestopduellinks=false;
@@ -46,6 +41,13 @@ client.on("ready", message=>{
     var timestopmd=false;
     var timestopcd=false;
     var repetban=true;
+
+
+// News YUGIOH
+ 
+
+client.on("ready", message=>{
+    console.log("prêt");
 
     // ID des salons des news
     var idsalonnewstcg="964907351637368832"; 
@@ -75,7 +77,7 @@ client.on("ready", message=>{
                 if (date.getHours() ===1){timestopduellinks=false;}
                 else {timestopduellinks=true}
                 }
-            else {timestopduellinks=true;   ;
+            else {timestopduellinks=true;  
  
                 var avtdl= textdl.indexOf('<meta property=\u0022og:image\u0022 content=\u0022');
                 var imgdl=textdl.substring(avtdl+35);
