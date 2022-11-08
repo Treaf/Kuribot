@@ -105,38 +105,19 @@ client.on("ready", message=>{
                 img=img.substring(0,ap);
                 const idsalonnews="993787860048150569"; // Mettre ID du salon des news
 
-                if(text.includes("Main Box")){
-                    var embed = new EmbedBuilder()
+                    const embed = new EmbedBuilder()
                         .setColor("#001427")
                         .setTitle("Duel Links News !")
                         .setURL(content)
-                        .setDescription("Une nouvelle Main Box va faire parler d'elle ! \n")
+                        .setDescription("Viens voir les news ici ! \n")
                         .setImage(img);
                     client.channels.cache.get(idsalonnews).send({embeds:[embed]})} 
-                else if(text.includes("Mini Box")){
-                        var embed = new EmbedBuilder()
-                            .setColor("#001427")
-                            .setTitle("Duel Links News !")
-                            .setURL(content)
-                            .setDescription("Une nouvelle Mini Box arrive bientôt ! \n")
-                            .setImage(img);
-                        client.channels.cache.get(idsalonnews).send({embeds:[embed]})} 
-                    else {
-                            var embed = new EmbedBuilder()
-                                .setColor("#001427")
-                                .setTitle("Duel Links News !")
-                                .setURL(content)
-                                .setDescription("Des nouveautés révélées ! \n")
-                                .setImage(img);
-                            client.channels.cache.get(idsalonnews).send({embeds:[embed]})} 
-                    }
             })
         }
         ,1000
         );
         }
     );
-
 // Master Duel Links Meta
 
 client.on("ready", message=>{
