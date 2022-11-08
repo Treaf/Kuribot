@@ -74,7 +74,7 @@ client.on("ready", message=>{
         needle.get(contentdl, (error, response) => {
             var textdl = response.body;
             if((textdl.includes("Page not found"))||timestopduellinks){        
-                if (date.getHours() ===1){timestopduellinks=false;}
+                if ((date.getHours() ===1)&&(date.getMinutes()<1)){timestopduellinks=false;}
                 else {timestopduellinks=true}
                 }
             else {timestopduellinks=true;  
@@ -127,7 +127,7 @@ client.on("ready", message=>{
         needle.get(contentmd, (error, response) => {
             var textmd = response.body;
             if((textmd.includes("Page not found"))||timestopmd){        
-                if (date.getHours() ===1){timestopmd=false;}
+                if ((date.getHours() ===1)&&(date.getMinutes()<1)){timestopmd=false;}
             }
            else {timestopmd=true;
                var avtmd= textmd.indexOf('<meta property=\u0022og:image\u0022 content=\u0022');
@@ -149,7 +149,7 @@ client.on("ready", message=>{
         needle.get(contentcd, (error, response) => {
             var textcd = response.body;
             if((textcd.includes("Page not found"))||timestopcd){        
-                if (date.getHours() ===1){timestopcd=false;}
+                if ((date.getHours() ===1)&&(date.getMinutes()<1)){timestopcd=false;}
             }
                 else {timestopcd=true;
                     var avtcd= textcd.indexOf('<meta property=\u0022og:image\u0022 content=\u0022');
@@ -166,7 +166,7 @@ client.on("ready", message=>{
                     client.channels.cache.get(idsalonnewscd).send({embeds:[embedcd]})}
         })    
     }
-    ,1000*3600);
+    ,1000*60);
 }
 );
 
