@@ -24,15 +24,9 @@ const monthNames = ["january", "february", "march", "april", "may", "june",
 
 // Creation de commandes
 
-client.on("messageCreate", message => {
-    if (message.author.bot) return;
-   
-    if (message.content === `!heure`){
-        message.reply("C'est l'heure du Duel ! \nhttps://tenor.com/view/yu-gi-oh-time-to-duel-card-gif-12403495"
-        );
-    }
-}
-);
+//client.on("messageCreate", message => {    if (message.author.bot) return;
+//    if (message.content === `!heure`){message.reply("C'est l'heure du Duel ! \nhttps://tenor.com/view/yu-gi-oh-time-to-duel-card-gif-12403495");}}
+//);
 
 
     // Timers
