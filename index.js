@@ -144,26 +144,7 @@ client.on("ready", message=>{
 
         
         // Cross Duel
-
-        needle.get(contentcd, (error, response) => {
-            textcd = response.body;
-            if((textcd.includes("Page not found"))||timestopcd){        
-                if ((date.getHours() ===1)&&(date.getMinutes()<1)){timestopcd=false;}
-            }
-                else {timestopcd=true;
-                    avtcd= textcd.indexOf('<meta property=\u0022og:image\u0022 content=\u0022');
-                    imgcd=textcd.substring(avtcd+35);
-                    apcd= imgcd.indexOf('\u0022 data-svelte=\u0022');
-                    imgcd=imgcd.substring(0,apcd);
-     
-                    embedcd = new EmbedBuilder()
-                                    .setColor("#ff8000")
-                                    .setTitle("Cross Duel News !")
-                                    .setURL(contentcd)
-                                    .setDescription("Des nouveautés ! \n")
-                                    .setImage(imgcd);
-                    client.channels.cache.get(idsalonnewscd).send({embeds:[embedcd]})}
-        })    
+    
     }
     ,1000*60);
 }
