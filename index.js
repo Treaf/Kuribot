@@ -42,8 +42,8 @@ client.on("messageCreate", message => {
 
 // Banlist TCG
 
-let timestopbl=true;
-let repetbl=true;
+var timestopbl=true;
+var repetbl=true;
 const idsalonnewstcg="964907351637368832"; // Mettre ID du salon des news
 
 
@@ -87,8 +87,9 @@ client.on("ready", message=>{
 );
 
 // News Duel Links Meta
-let datenewsdlm=new Date();
-let timestopdlm=false;
+var datenewsdlm=new Date();
+datenewsdlm = new Date(datenewsdlm.getFullYear()+'-'+monthNames[datenewsdlm.getMonth()]+'-'+datenewsdlm.getDate());
+var timestopdlm=false;
 const idsalonnewsdlm="993787860048150569"; // Mettre ID du salon des news
 
 client.on("ready", message=>{
@@ -100,10 +101,12 @@ client.on("ready", message=>{
         let text = response.body;
         if((text.includes("Page not found"))||timestopdlm){        
             let date = new Date();
+            date = new Date(date.getFullYear()+'-'+monthNames[date.getMonth()]+'-'+date.getDate());
             if (date>datenewsdlm){timestopdlm=false;}
     }
             else {timestopdlm=true;
-                datenewsdlm=date;
+                datenewsdlm=new Date();
+                datenewsdlm = new Date(datenewsdlm.getFullYear()+'-'+monthNames[datenewsdlm.getMonth()]+'-'+datenewsdlm.getDate());
                 let avt= text.indexOf('<meta property=\u0022og:image\u0022 content=\u0022');
                 var img=text.substring(avt+35);
                 let ap= img.indexOf('\u0022 data-svelte=\u0022');
@@ -143,8 +146,9 @@ client.on("ready", message=>{
 
 // Master Duel Meta
 
-let datenewsmdm=new Date();
-let timestopmdm=false;
+var datenewsmdm=new Date();
+datenewsmdm= = new Date(datenewsmdm.getFullYear()+'-'+monthNames[datenewsmdm.getMonth()]+'-'+datenewsmdm.getDate());
+var timestopmdm=false;
 const idsalonnewsmdm="993789778833195138"; // Mettre ID du salon des news
 
 client.on("ready", message=>{
@@ -156,10 +160,13 @@ client.on("ready", message=>{
         let text = response.body;
         if((text.includes("Page not found"))||timestopmdm){        
             let date = new Date();
+            date = new Date(date.getFullYear()+'-'+monthNames[date.getMonth()]+'-'+date.getDate());
+
             if (date>datenewsmdm){timestopmdm=false;}
         }
             else {timestopmdm=true;
-                datenewsmdm=date;
+                datenewsmdm=new Date();
+                datenewsmdm= = new Date(datenewsmdm.getFullYear()+'-'+monthNames[datenewsmdm.getMonth()]+'-'+datenewsmdm.getDate());
                 let avt= text.indexOf('<meta property=\u0022og:image\u0022 content=\u0022');
                 var img=text.substring(avt+35);
                 let ap= img.indexOf('\u0022 data-svelte=\u0022');
