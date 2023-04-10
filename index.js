@@ -87,6 +87,7 @@ client.on("ready", message=>{
 );
 
 // News Duel Links Meta
+let datenewsdlm=new Date();
 let timestopdlm=false;
 const idsalonnewsdlm="993787860048150569"; // Mettre ID du salon des news
 
@@ -99,9 +100,10 @@ client.on("ready", message=>{
         let text = response.body;
         if((text.includes("Page not found"))||timestopdlm){        
             let date = new Date();
-            if (date.getHours() ===1){timestopdlm=false;}
+            if (date>datenewsdlm){timestopdlm=false;}
     }
             else {timestopdlm=true;
+                datenewsdlm=date;
                 let avt= text.indexOf('<meta property=\u0022og:image\u0022 content=\u0022');
                 var img=text.substring(avt+35);
                 let ap= img.indexOf('\u0022 data-svelte=\u0022');
@@ -141,6 +143,7 @@ client.on("ready", message=>{
 
 // Master Duel Meta
 
+let datenewsmdm=new Date();
 let timestopmdm=false;
 const idsalonnewsmdm="993789778833195138"; // Mettre ID du salon des news
 
@@ -153,9 +156,10 @@ client.on("ready", message=>{
         let text = response.body;
         if((text.includes("Page not found"))||timestopmdm){        
             let date = new Date();
-            if (date.getHours() ===1){timestopmdm=false;}
+            if (date>datenewsmdm){timestopmdm=false;}
         }
             else {timestopmdm=true;
+                datenewsmdm=date;
                 let avt= text.indexOf('<meta property=\u0022og:image\u0022 content=\u0022');
                 var img=text.substring(avt+35);
                 let ap= img.indexOf('\u0022 data-svelte=\u0022');
