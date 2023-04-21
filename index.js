@@ -147,7 +147,7 @@ client.on("ready", message=>{
 // Master Duel Meta
 
 var datenewsmdm=new Date();
-datenewsmdm= = new Date(datenewsmdm.getFullYear()+'-'+monthNames[datenewsmdm.getMonth()]+'-'+datenewsmdm.getDate());
+datenewsmdm= new Date(datenewsmdm.getFullYear()+'-'+monthNames[datenewsmdm.getMonth()]+'-'+datenewsmdm.getDate());
 var timestopmdm=false;
 const idsalonnewsmdm="993789778833195138"; // Mettre ID du salon des news
 
@@ -166,7 +166,7 @@ client.on("ready", message=>{
         }
             else {timestopmdm=true;
                 datenewsmdm=new Date();
-                datenewsmdm= = new Date(datenewsmdm.getFullYear()+'-'+monthNames[datenewsmdm.getMonth()]+'-'+datenewsmdm.getDate());
+                datenewsmdm= new Date(datenewsmdm.getFullYear()+'-'+monthNames[datenewsmdm.getMonth()]+'-'+datenewsmdm.getDate());
                 let avt= text.indexOf('<meta property=\u0022og:image\u0022 content=\u0022');
                 var img=text.substring(avt+35);
                 let ap= img.indexOf('\u0022 data-svelte=\u0022');
